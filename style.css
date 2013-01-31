@@ -1,0 +1,83 @@
+#progress {
+	width: 930px;
+	margin: 10px auto 20px auto;
+	background: rgba(0, 0, 0, 0.7);
+	padding: 8px;
+	opacity: 0.98;
+	border-radius: 5px;
+	color: white;
+	font-size: 18px;
+	font-weight: 600;
+	overflow: hidden;	
+}
+#progress div { 
+	margin: 5px;
+	float: left;
+	-webkit-transition: all 0.2s ease-in-out;
+	-moz-transition: all 0.2s ease-in-out;
+	transition: all 0.2s ease-in-out;
+}
+#progress .bar {
+	display: none;
+	margin-right: 12px;
+	min-width: 126px;
+	min-height: 22px;
+	background: url(loader.gif) no-repeat 0 1px;
+	position: relative;
+	opacity: 0.74;
+}
+#progress .msg {
+	display: none;
+	margin-top: 8px;
+	font-size: 16px;
+	font-family: "Courier New", Courier, monospace;
+	font-weight: 500;
+	text-shadow:1px 1px 1px #2c2c2c;
+
+}
+
+#results {
+	margin: 0 auto;
+	width: 940px;
+	min-height: 56px;
+	padding: 10px;
+	position: relative;
+
+	display: none;
+}
+
+textarea {
+	margin: 4px auto 22px auto;
+	width: 934px;
+	min-height: 140px;
+	position: relative;
+}
+
+h3 { margin: 0; padding:0; }
+
+.btn {
+	margin: 0;
+	min-width: 86px;
+	padding: 6px 12px;
+	text-align: center;
+	color: #333;
+	text-shadow: white 0 1px 0;
+	background-color: gainsboro;
+	text-decoration: none;
+	float: right;
+	display: block;
+	-webkit-transition: opacity .2s linear, background .1s linear;
+	-moz-transition: opacity .2s linear, background .1s linear;
+	-ms-transition: opacity .2s linear, background .1s linear;
+	-o-transition: opacity .2s linear, background .1s linear;
+	transition: opacity .2s linear, background .1s linear;
+}
+.btn:hover {
+	color: #333;
+	text-shadow: white 0 1px 0;
+	background-color: #CACACA;
+}
+
+
+.green { background: #DFF0D8; }
+.red { background: #F2DEDE; }
