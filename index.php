@@ -18,6 +18,8 @@
 
 	<h2>Site scripts in the <code><?=htmlspecialchars('<head>');?></code>:</h2> 
 	<hr><br>
+
+	<div id="content"></div>
 </div>
 
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>

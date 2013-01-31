@@ -12,6 +12,8 @@
 	var $progressMessage = $progress.find('.msg');
 
 	var $results = $('#results');
+	var $results_content = $('#content');
+	var $errors = $('#errors');
 
 	var successNum = 0;
 	var totalSites = sitesArray.length;
@@ -67,16 +69,17 @@
 				errMessage = '<p> <b>' + sitesArray[i] + '</b>';
 				errMessage += ' - This site totally failed (perhaps of a redirect). Error mesages:</p>';
 				errMessage += '<p><b class="red">1. ' + textStatus + '</b><br>';
-				errMessage += '<b class="red">2. ' + errorThrown + '</b></p><hr>';
+				errMessage += '<b class="red">2. ' + errorThrown + '</b></p>';
 
-				$('#errors').append(errMessage);
+				$errors.append(errMessage);
 			});			
 		});
 	}
 
 	// Ajax complete callback
 	function onCurlComplete() {
-		$results.append(fragment).fadeIn('slow');
+		$results_content.append(fragment);
+		$results.fadeIn('slow');
 
 		$progressMessage.hide().text('Task completed');
 		$progress.find('.bar').hide();
@@ -90,6 +93,10 @@
 	// Initialize here...
 	$('#start').on('click', function (e) {
 		e.preventDefault();
+
+		// Reset
+		$results_content.html('');
+		$errors.html('');
 		$results.fadeOut();
 
 		$progress.find('div').fadeIn(); 

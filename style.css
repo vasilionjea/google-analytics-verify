@@ -36,6 +36,18 @@
 
 }
 
+#errors {
+	opacity: 0.68;
+	background: #F0F0F0;
+	padding: 1.2%;
+	-webkit-transition: all 0.2s ease-in-out;
+	-moz-transition: all 0.2s ease-in-out;
+	transition: all 0.2s ease-in-out;
+}
+#errors:hover {
+	opacity: 1;
+}
+
 #results {
 	margin: 0 auto;
 	width: 940px;
